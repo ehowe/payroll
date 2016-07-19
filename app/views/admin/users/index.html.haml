@@ -1,2 +1,4 @@
-= table_for @users do
+= table_for @users, html: {tr: {class: "row"}}, stripes: %w(even odd) do
+  - column :id do |id|
+    - link_to(id, admin_user_path(id))
   - columns :id, :first_name, :last_name

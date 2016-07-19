@@ -3,6 +3,6 @@ class Admin::ApplicationController < ApplicationController
 
   def authenticate_user!
     super
-    current_user.adminstator?
+    current_user.administrator?
   end
 end

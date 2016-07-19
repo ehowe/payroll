@@ -1,5 +1,7 @@
 RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include Devise::Test::ControllerHelpers, type: :view
-  config.include Devise::TestHelpers
+  config.include Warden::Test::Helpers
 end
+
+Warden.test_mode!
