@@ -7,4 +7,12 @@ Rails.application.routes.draw do
 
     root to: "admin#index"
   end
+
+  resources :users do
+    member do
+      put :punch_clock, to: "timeclock#punch"
+    end
+  end
+
+  root to: "users#show"
 end
